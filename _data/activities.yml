@@ -26,9 +26,9 @@
 #  first, and four spaces before each highlight, exactly as in the examples.
 # =============================================================================
 
-- role: "Placeholder: Electrical Lead"
-  organization: "Placeholder: Student Engineering Team"
-  dates: "Month 20XX – Present"
+- role: "Avionics Engineer"
+  organization: "Penn High-Powered Rocketry Team"
+  dates: "Sept. 2025 – Present"
   description: >-
     Placeholder description of the team and your responsibilities on it.
   highlights:
@@ -37,14 +37,26 @@
   link: "/projects/example-motor-controller/"
   link_label: "Related project"
 
-- role: "Placeholder: Undergraduate Researcher"
-  organization: "Placeholder: Lab Name"
-  dates: "Month 20XX – Month 20XX"
+- role: "Avionics Engineer"
+  organization: "High Altitude Balloon Team"
+  dates: "Sept 2026 – Present"
   description: >-
     Placeholder description of the research question and what you worked on.
 
-- role: "Placeholder: Teaching Assistant"
-  organization: "Placeholder: Course Name"
-  dates: "Term 20XX"
-  highlights:
-    - "Placeholder: what you taught or supported, and for how many students."
+- role: "Python TA"
+  organization: "CIS 1100"
+  dates: "Jan 2026 – Present"
+  description: >-
+    Placeholder description of the research question and what you worked on.
+
+- role: "Treasurer"
+  organization: "ESE Student Advisory Board"
+  dates: "June 2026 – Present"
+  description: >-
+    Placeholder description of the research question and what you worked on.
+
+- role: "Member"
+  organization: "Penn Quantum Computing Club"
+  dates: "Sept 2026 – Present"
+  description: >-
+    Placeholder description of the research question and what you worked on.
