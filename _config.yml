@@ -18,7 +18,7 @@ author:
   status: "Graduating May 2029 · Seeking summer internships"
   # Portrait shown in the About section. Put your photo in assets/img/ and
   # update the path. Leave "" to hide the photo entirely.
-  photo: "/assets/img/placeholder-portrait.svg"
+  photo: "/assets/img/headshot.jpg"
 
 # --- Contact & profile links ---------------------------------------------------
 # Each link is only displayed if `url` is filled in, so there are never dead
