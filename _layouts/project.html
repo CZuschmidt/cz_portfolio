@@ -87,7 +87,7 @@ layout: default
   </div>
 
   {%- comment -%} Previous / next project, in the same order as the home page grid. {%- endcomment -%}
-  {%- assign projects = site.projects | sort: "date" | reverse -%}
+  {%- include sorted-projects.html -%}
   {%- for p in projects -%}
     {%- if p.url == page.url -%}
       {%- assign idx = forloop.index0 -%}
