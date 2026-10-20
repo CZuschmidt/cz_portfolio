@@ -6,8 +6,9 @@ summary: >-
   A custom flight computer that collects and logs every payload sensor on a
   high-altitude balloon, for post-flight trajectory reconstruction and weather
   analysis.
-image: "/assets/img/placeholder.svg"   # replace with a photo or render, e.g. "/assets/img/projects/balloon-flight-computer/board.jpg"
-image_alt: ""
+image: "/assets/img/projects/balloon-flight-computer/launch.jpg"
+image_alt: "Two white weather balloons carrying a payload box and a folded yellow parachute against a blue sky"
+image_caption: "Two weather balloons lifting a payload and its recovery parachute."
 skills: ["PCB design", "Embedded firmware", "Sensors", "GPS", "Data logging"]
 role: "Avionics & Flight Computer Design"
 team: "High-Altitude Balloon Team"
