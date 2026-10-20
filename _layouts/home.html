@@ -53,7 +53,7 @@ layout: default
 <section id="projects" class="section container" aria-labelledby="projects-title">
   <h2 id="projects-title" class="section__label">Projects</h2>
   <div class="section__body">
-    {%- assign projects = site.projects | sort: "date" | reverse -%}
+    {%- include sorted-projects.html -%}
     {%- if projects.size > 0 %}
     <ul class="card-grid">
       {%- for project in projects %}

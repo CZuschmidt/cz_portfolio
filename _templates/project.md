@@ -12,7 +12,7 @@
 #    4. Fill in the fields below and write the page in Markdown underneath
 #       the closing --- line.
 #    5. Commit and push. The project appears on the home page automatically,
-#       sorted by `date` (newest first).
+#       sorted by `order` if set, otherwise by `date` (newest first).
 #
 #  Optional fields can be deleted entirely; anything left out is not shown.
 #  To hide a project without deleting it, add the line:  published: false
@@ -20,7 +20,9 @@
 # =============================================================================
 
 title: "Project Title"
-date: 2026-01-15                 # YYYY-MM-DD. Controls the order on the home page.
+date: 2026-01-15                 # YYYY-MM-DD. Shown on the card; newest projects are listed first.
+# order: 3                       # optional: pin this project near the top. Projects with
+                                 # an order come first (1, 2, 3, …), then the rest by date.
 category: "Embedded Systems"     # optional, short label shown above the title
 summary: >-
   One or two sentences describing what you built and why. Shown on the

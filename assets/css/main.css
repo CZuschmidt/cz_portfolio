@@ -704,7 +704,8 @@ main:focus { outline: none; }
 .prose .figure { margin-block: var(--s4); }
 .figure__link { display: block; cursor: zoom-in; }
 .figure img {
-  width: 100%;
+  width: auto;          /* never upscale small images past their real size */
+  max-width: 100%;
   background: var(--placeholder);
   border: 1px solid var(--line);
   border-radius: var(--radius);
@@ -718,7 +719,7 @@ main:focus { outline: none; }
   .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 .prose .gallery .figure { margin: 0; }
-.gallery img { aspect-ratio: 4 / 3; object-fit: cover; }
+.gallery img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
 
 /* Previous / next */
 .pager {

@@ -1,6 +1,7 @@
 ---
 title: "Quality Control of the DUNE Power and Timing Card"
 date: 2026-05-15
+order: 1
 category: "Research · Hardware Verification"
 summary: >-
   Production quality-control testing of the Power and Timing Card (PTC), a

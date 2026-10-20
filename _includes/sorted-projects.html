@@ -1,0 +1,10 @@
+{%- comment -%}
+  Sets `projects` to all projects in display order:
+    1. projects with an `order:` value, lowest number first
+    2. every other project, newest `date` first
+  Used by the home page grid and the previous/next links on project pages.
+{%- endcomment -%}
+{%- assign by_date = site.projects | sort: "date" | reverse -%}
+{%- assign ordered = by_date | where_exp: "p", "p.order" | sort: "order" -%}
+{%- assign unordered = by_date | where_exp: "p", "p.order == nil" -%}
+{%- assign projects = ordered | concat: unordered -%}
