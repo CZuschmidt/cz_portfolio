@@ -2,7 +2,7 @@
 title: "ECG Analog Front End"
 date: 2026-09-15
 order: 6
-category: "Analog Circuits · ESE 2150"
+category: "Current class project · ESE 2150"
 summary: >-
   An op-amp signal chain that amplifies and filters the heart's electrical
   signal from skin electrodes so the ECG waveform can be viewed on an
@@ -11,7 +11,7 @@ image: "/assets/img/projects/ecg-front-end/signal-chain.svg"
 image_alt: "Block diagram: electrodes feed an instrumentation amplifier, a high-pass filter, a low-pass filter and a gain stage, with the output going to an oscilloscope; an ECG trace runs above the chain"
 image_caption: "Signal chain of the ECG front end (illustration)."
 skills: ["Op amps", "Analog filters", "Circuit analysis", "Oscilloscope"]
-role: "Course project, ESE 2150 (Circuits and Systems)"
+role: "Current class project, ESE 2150 (Circuits and Systems)"
 duration: "Fall 2026"
 ---
 

@@ -2,7 +2,7 @@
 title: "Compiler for the J Language"
 date: 2026-09-16
 order: 7
-category: "Computer Systems · CIS 2400"
+category: "Current class project · CIS 2400"
 summary: >-
   A compiler written in C that translates programs in J, a small stack-based
   language, into RISC-V assembly.
@@ -10,7 +10,7 @@ image: "/assets/img/projects/j-compiler/pipeline.svg"
 image_alt: "Pipeline diagram: program.j goes into a compiler written in C, made of a tokenizer and a code generator, which outputs program.s in RISC-V assembly"
 image_caption: "Structure of the J compiler (illustration)."
 skills: ["C", "RISC-V assembly", "Compilers", "Linux"]
-role: "Course project, CIS 2400 (Introduction to Computer Systems)"
+role: "Current class project, CIS 2400 (Introduction to Computer Systems)"
 duration: "Fall 2026"
 ---
 
