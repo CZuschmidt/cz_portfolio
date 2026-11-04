@@ -1,6 +1,6 @@
 ---
 title: "Compiler for the J Language"
-date: 2026-09-16
+date: 2026-10-01
 order: 7
 category: "Current class project · CIS 2400"
 summary: >-
@@ -11,7 +11,7 @@ image_alt: "Pipeline diagram: program.j goes into a compiler written in C, made 
 image_caption: "Structure of the J compiler (illustration)."
 skills: ["C", "RISC-V assembly", "Compilers", "Linux"]
 role: "Current class project, CIS 2400 (Introduction to Computer Systems)"
-duration: "Fall 2026"
+duration: "Oct 2026 – present"
 ---
 
 ## Overview

@@ -1,6 +1,6 @@
 ---
 title: "ECG Analog Front End"
-date: 2026-09-15
+date: 2026-10-01
 order: 6
 category: "Current class project · ESE 2150"
 summary: >-
@@ -12,7 +12,7 @@ image_alt: "Block diagram: electrodes feed an instrumentation amplifier, a high-
 image_caption: "Signal chain of the ECG front end (illustration)."
 skills: ["Op amps", "Analog filters", "Circuit analysis", "Oscilloscope"]
 role: "Current class project, ESE 2150 (Circuits and Systems)"
-duration: "Fall 2026"
+duration: "Oct 2026 – present"
 ---
 
 ## Overview
