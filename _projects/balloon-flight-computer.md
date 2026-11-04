@@ -1,6 +1,7 @@
 ---
 title: "High-Altitude Balloon Flight Computer"
 date: 2026-09-01
+order: 3
 category: "Avionics"
 summary: >-
   A custom flight computer that collects and logs every payload sensor on a

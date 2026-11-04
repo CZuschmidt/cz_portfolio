@@ -1,6 +1,7 @@
 ---
 title: "FPGA-Based Digital Control of a Synchronous Buck Converter"
 date: 2026-08-01
+order: 4
 category: "Power Electronics"
 summary: >-
   A 12 V to 5 V, 3 A synchronous buck converter regulated by a digital control
