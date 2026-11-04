@@ -1,6 +1,7 @@
 ---
 title: "Quantum Entanglement Verification at MIT iQuHACK"
 date: 2026-01-15
+order: 5
 category: "Quantum Computing · Hackathon"
 summary: >-
   Prepared a 20-qubit GHZ state in Qiskit and ran it on IQM superconducting
