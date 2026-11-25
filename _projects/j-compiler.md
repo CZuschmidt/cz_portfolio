@@ -4,36 +4,63 @@ date: 2026-10-01
 order: 7
 category: "Current class project · CIS 2400"
 summary: >-
-  A compiler written in C that translates programs in J, a small stack-based
-  language, into RISC-V assembly.
+  jc, a compiler written in C that translates J, a stack-based language
+  inspired by Forth, into RISC-V assembly that follows the clang calling
+  convention.
 image: "/assets/img/projects/j-compiler/pipeline.svg"
-image_alt: "Pipeline diagram: program.j goes into a compiler written in C, made of a tokenizer and a code generator, which outputs program.s in RISC-V assembly"
+image_alt: "Pipeline diagram: source.j goes into jc, a compiler written in C made of a tokenizer and a code generator, which outputs source.s in RISC-V assembly to run in PennSim"
 image_caption: "Structure of the J compiler (illustration)."
-skills: ["C", "RISC-V assembly", "Compilers", "Linux"]
+skills: ["C", "RISC-V assembly", "Compilers", "Makefiles", "Valgrind", "Linux"]
 role: "Current class project, CIS 2400 (Introduction to Computer Systems)"
 duration: "Oct 2026 – present"
 ---
 
 ## Overview
 
-For CIS 2400, this project is a compiler, written in C, that reads programs in
-J, a small stack-based language, and translates them into RISC-V assembly that
-can be assembled and run.
+For CIS 2400, `jc` compiles programs written in J, a stack-oriented language
+loosely inspired by Forth, into RISC-V assembly. Running `./jc source.j` writes
+`source.s`, which is assembled and run in the PennSim simulator. Like clang,
+`jc` only generates assembly; it never executes it.
 
-## How it works
+## The J language
 
-- **Tokenizer:** reads the J source file and splits it into tokens: numbers,
-  operators, keywords and function names.
+Every value in J is a 32-bit integer on a stack, and programs are written in
+Reverse Polish Notation. `7 5 4 + *` pushes 7, 5 and 4, adds the top two and
+then multiplies, leaving 63.
+
+- **Literals:** decimal and hexadecimal (`0xD6DEF00D`), any 32-bit value
+- **Arithmetic:** `+ - * / %`
+- **Comparisons:** `lt le eq ge gt`, which push 1 or 0
+- **Bitwise logic:** `and or not`
+- **Stack operations:** `drop dup swap rot`
+- **Control flow:** `if … else … endif` and `while … endwhile`, nested freely
+- **Functions:** `defun name … return`, with `get_argN` and `set_argN` for
+  arguments in `a0` to `a7`
+
+```
+defun square
+get_arg1
+dup *
+return
+```
+
+## How jc works
+
+- **Tokenizer (`token.c`):** `next_token` reads the source one token at a
+  time, skipping whitespace and `;` comments, and classifies each token.
 - **Code generation:** for each token, the compiler emits RISC-V instructions
-  that work on a stack in memory, pushing values and popping operands for
-  arithmetic and comparisons.
-- **Control flow:** conditionals and loops become labels and branch
-  instructions.
-- **Functions:** J functions compile to RISC-V functions that follow the
-  standard calling convention, saving and restoring registers on the stack.
+  that push to and pop from a stack in memory. Constants too large for a
+  12-bit immediate are built from an upper and a lower part.
+- **Control flow:** every `if` and `while` gets unique labels, and a stack of
+  open blocks tracks nesting so each `else`, `endif` and `endwhile` branches
+  to the right place.
+- **Functions:** prologues and epilogues follow the clang-19 calling
+  convention, with `fp` (x8) and `sp` (x2), so J and C functions can call each
+  other. After a call, the return value is pushed onto the J stack.
 
-## Why it matters
+## Build and testing
 
-Writing a compiler at this level means managing memory, the stack and
-registers directly, and shows how C code maps to the instructions the
-processor actually runs.
+The code is split across `token.c`, `jc.c` and a code-generation module, built
+by a Makefile with clang-19 and `-Wall`. It is tested against sample J programs
+in PennSim, checked for memory leaks with Valgrind, and graded by an
+autograder and a verbal assessment.
